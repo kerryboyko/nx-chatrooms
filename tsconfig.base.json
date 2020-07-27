@@ -16,8 +16,10 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@chatrooms/api-interfaces": ["libs/api-interfaces/src/index.ts"]
-    }
+      "@chatrooms/api-interfaces": ["libs/api-interfaces/src/index.ts"],
+      "@chatrooms/environments": ["libs/environments/src/index.ts"]
+    },
+    "esModuleInterop": true
   },
   "exclude": ["node_modules", "tmp"]
 }
