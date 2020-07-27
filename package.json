@@ -29,11 +29,13 @@
   "dependencies": {
     "@types/express-graphql": "^0.9.0",
     "@types/graphql": "^14.5.0",
+    "@types/mongodb": "^3.5.25",
     "@types/ws": "^7.2.6",
     "document-register-element": "1.14.3",
     "express": "4.17.1",
     "express-graphql": "^0.11.0",
     "graphql": "^15.3.0",
+    "mongodb": "^3.5.9",
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "react-is": "16.13.1",
