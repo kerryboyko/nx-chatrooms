@@ -2,7 +2,7 @@
 /* eslint-disable @typescript-eslint/no-non-null-assertion */
 import {
   createChatroom,
-  joinChatroom,
+  addMembersToChatroom,
   readChatroom,
   appendToLog,
   batchAppendToLog,
@@ -43,9 +43,9 @@ describe('chatrooms', () => {
       });
     });
   });
-  describe('joinChatroom', () => {
+  describe('addMembersToChatroom', () => {
     it('joins a chatroom', async () => {
-      const testResult: any = await joinChatroom(
+      const testResult: any = await addMembersToChatroom(
         'alpha',
         'david',
         'test-Chatrooms'
@@ -59,7 +59,7 @@ describe('chatrooms', () => {
       });
     });
     it(`Doesn't add the same name twice`, async () => {
-      const testResult: any = await joinChatroom(
+      const testResult: any = await addMembersToChatroom(
         'alpha',
         'david',
         'test-Chatrooms'
@@ -78,7 +78,7 @@ describe('chatrooms', () => {
       });
     });
     it(`creates a chatroom that doesn't exist`, async () => {
-      const testResult: any = await joinChatroom(
+      const testResult: any = await addMembersToChatroom(
         'beta',
         'ernie',
         'test-Chatrooms'
