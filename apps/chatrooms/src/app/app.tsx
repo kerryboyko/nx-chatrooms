@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Message } from '@chatrooms/api-interfaces';
 import sharedEnvironment from '@chatrooms/environments';
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { useAuth0 } from '@auth0/auth0-react';
 import ChatRoom from './containers/ChatRoom';
 
@@ -18,9 +18,7 @@ export const App: React.FC<unknown> = () => {
 
   return (
     <>
-      <div style={{ textAlign: 'center' }}>
-        <h1>Welcome to chatrooms!</h1>
-        <pre>{JSON.stringify({ sharedEnvironment }, null, 2)}</pre>
+      <div>
         <ChatRoom />
         <LoginButton />
       </div>

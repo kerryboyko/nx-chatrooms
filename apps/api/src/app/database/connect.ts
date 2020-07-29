@@ -13,7 +13,6 @@ const connect = (
         reject(err);
         return;
       }
-      console.log(`Connected to Mongo Database`);
       const db: Db = client.db(dbName);
       resolve({ db, close: () => client.close() });
     });

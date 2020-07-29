@@ -3,7 +3,7 @@ export interface Message {
 }
 
 export interface ChatMessage {
-  type: 'SERVER::message' | 'CLIENT::message';
+  type: string;
   roomName: string;
   message: string;
   timeStamp: Date;
@@ -11,8 +11,14 @@ export interface ChatMessage {
   senderId: string;
 }
 
+export interface Chatroom {
+  members: string[];
+  roomName: string;
+  logs: ChatMessage[];
+}
+
 export interface DirectMessage {
-  type: 'SERVER::direct-message' | 'CLIENT::direct-message';
+  type: string;
   sender: string;
   senderId: string;
   reciever: string;

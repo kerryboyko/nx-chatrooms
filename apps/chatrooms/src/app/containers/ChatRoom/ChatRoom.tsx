@@ -6,7 +6,7 @@ socket.onmessage = (data: any) => {
   console.log(data);
 };
 
-const ChatRoom: React.FC<{ messages: ChatMessage[] }> = ({ messages }) => {
+const ChatRoom: React.FC<unknown> = () => {
   const [textField, setTextField] = useState<string>('');
   const handleTextField: React.ChangeEventHandler<HTMLInputElement> = (
     event
